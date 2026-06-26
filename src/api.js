@@ -18,11 +18,9 @@
 //   }
 //   return `${API_BASE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 // };
-
-
 import axios from "axios";
 
-const API_BASE_URL = import.env.VITE_API_URL;
+export const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
